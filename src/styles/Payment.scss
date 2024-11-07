@@ -1,0 +1,106 @@
+/* payment.scss */
+
+$primary-color: #4e44ce; // You can change this to your preferred primary color
+$secondary-color: #ffffff;
+$font-family: 'Arial', sans-serif;
+
+.payment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 400px;
+  margin: auto;
+  background-color: $secondary-color;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: $font-family;
+  transform: translateY(50%);
+
+  @media (max-width: 600px) {
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: $primary-color;
+    text-align: center;
+  }
+
+  input[type="number"],
+  input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: $primary-color;
+    color: $secondary-color;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  .qr-code-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: $primary-color;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 1rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    input[type="number"],
+    input[type="text"] {
+      font-size: 0.9rem;
+    }
+
+    button {
+      font-size: 0.9rem;
+    }
+
+    .qr-code-container h2 {
+      font-size: 1.2rem;
+    }
+  }
+}
